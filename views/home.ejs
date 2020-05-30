@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+
+<p><%= hmstrtngcntnt %></p>
+
+
+<% psts.forEach(function(article) { %>
+
+  <h2> <%= article.title %> </h2>
+<% let str = article.post %>
+  <p><%= str.slice(0,100)+" ..."; %>
+
+ <a href="/posts/<%=article.title%>">Read more</a>
+
+  </p>
+  <% }); %>
+
+
+
+<%- include("partials/footer") -%>
