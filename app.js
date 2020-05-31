@@ -97,6 +97,6 @@ else {
 
 // toto je routing; ako nodchytiť navigovanie; ":niečo" sa ukladá do objektu{req.params} a môže byť použité presne na navigovanie; a funguje aj naopak, že môže by redirect; ak niečo bude za posts/ napísané, tak to vidím v objekte presne v tom jeho parametri ako si honazvem keď ho odchytávam;
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
